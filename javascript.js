@@ -40,3 +40,5 @@ function appear() {
 d.addEventListener("DOMContentLoaded", (e) => {
   appear();
 });
+
+d.createElement();

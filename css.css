@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@700&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -11,9 +11,9 @@ button {
 .welcome {
   z-index: 1000;
   position: fixed;
-  background-color: #240933;
+  background-color: #1b0527;
   width: 100vw;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,3 +79,59 @@ label {
 }
 
 /*****************/
+/*********PRESENTACION***************/
+.header-terminal {
+  display: flex;
+  align-items: row;
+  justify-content: space-between;
+  width: inherit;
+}
+
+.btns-window {
+  display: flex;
+  flex-direction: row;
+}
+.btns-window > div {
+  cursor: pointer;
+  margin: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.menu-terminal {
+  margin-top: 0px;
+}
+.container-lines-menu {
+  cursor: pointer;
+  margin-top: 0px;
+  border-radius: 1px;
+  background-color: rgb(22, 13, 13);
+  width: 16px;
+  height: 12px;
+}
+.container-lines-menu > div {
+  background-color: #fff;
+  margin: 3px;
+  height: 1px;
+  width: 10px;
+}
+.my-name {
+  color: white;
+  font-family: "Spline Sans Mono", monospace;
+  font-size: 3.8vw;
+  margin-top: 0px;
+}
+
+.container-my-data {
+  margin-top: 10px;
+  opacity: 0.9;
+  width: 90vw;
+  height: 40vh;
+  border-radius: 2px;
+  background-color: rgba(108, 35, 135, 0.107);
+  border-style: solid;
+  border-color: #69f30e;
+  border-width: 0.1px;
+}
+
+/*********1PRESENTACION***************/
