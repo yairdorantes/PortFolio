@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #100317;
+}
+button {
+  position: fixed;
+}
+.welcome {
+  z-index: 1000;
+  position: fixed;
+  background-color: #240933;
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+/***label cargando****/
+label {
+  font-size: 15px;
+  margin: 10px;
+  color: #69f30e;
+  font-family: "Roboto Mono", monospace;
+}
+/************/
+
+/*********progressbar**********/
+.container-bar {
+  width: 200px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #2d093f;
+}
+.progress {
+  width: 0px;
+  height: 3px;
+  border-radius: 3px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 20%,
+    rgba(208, 41, 41, 1) 60%,
+    rgba(252, 176, 69, 1) 95%
+  );
+}
+/****/
+/*****aparecer caraga****/
+.appear {
+  visibility: visible;
+  animation: aparecer 0.8s ease-in-out;
+}
+@keyframes aparecer {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*****************/
+/*******DESAPARECER CARGA********/
+.disappear {
+  animation: bye 2s;
+}
+
+@keyframes bye {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+/*****************/
