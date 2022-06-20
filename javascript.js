@@ -13,6 +13,13 @@ traslate = {
   },
 };
 
+terminal = [
+  "Obj:1 http://update.send-anywhere.com/linux/debian stable InRelease",
+  "Obj:2 http://packages.microsoft.com/repos/code stable InRelease",
+  "Obj:3 http://security.ubuntu.com/ubuntu focal-security InRelease ",
+  "Obj:4 https://packages.microsoft.com/repos/vscode stable InRelease",
+];
+
 const d = document;
 
 const pageLoading = d.querySelector(".welcome");
@@ -41,4 +48,41 @@ d.addEventListener("DOMContentLoaded", (e) => {
   appear();
 });
 
-d.createElement();
+const phraseDeveloper = d.getElementById("be");
+const updates = d.getElementById("info-update");
+const clearing = d.getElementById("clear");
+let str = "sudo apt-get update";
+
+let index = 0;
+let indexUpdate = 0;
+let indexClear = 0;
+let clear = "clear";
+
+const brHtml = d.createElement("br");
+
+let intervalId = setInterval(function () {
+  phraseDeveloper.textContent += str[index];
+
+  index++;
+  if (index === str.length) {
+    clearInterval(intervalId);
+    /***aparecen actualizaciones */
+    let intervalUpdate = setInterval(function () {
+      updates.textContent += terminal[indexUpdate] + brHtml;
+      indexUpdate++;
+      if (indexUpdate === terminal.length) {
+        clearInterval(intervalUpdate);
+        /*****fin actualizaciones******/
+        /****write clear */
+        let intervalClear = setInterval(function () {
+          clearing.textContent += clear[indexClear];
+          indexClear++;
+          if (indexClear === clear.length) {
+            clearInterval(intervalClear);
+          }
+        }, 300);
+        /****ends-write clear */
+      }
+    }, 200);
+  }
+}, 200);

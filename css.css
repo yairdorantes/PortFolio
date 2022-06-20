@@ -86,7 +86,23 @@ label {
   justify-content: space-between;
   width: inherit;
 }
-
+.cursor {
+  background-color: #69f30e;
+  width: 8px;
+  height: 17px;
+  animation: parpadeo 1.8s infinite;
+}
+@keyframes parpadeo {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
 .btns-window {
   display: flex;
   flex-direction: row;
@@ -125,8 +141,8 @@ label {
 .container-my-data {
   margin-top: 10px;
   opacity: 0.9;
-  width: 90vw;
-  height: 40vh;
+  width: 99vw;
+  height: 80vh;
   border-radius: 2px;
   background-color: rgba(108, 35, 135, 0.107);
   border-style: solid;
