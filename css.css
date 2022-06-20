@@ -26,7 +26,7 @@ label {
   font-size: 15px;
   margin: 10px;
   color: #69f30e;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Spline Sans Mono", monospace;
 }
 /************/
 
@@ -80,6 +80,9 @@ label {
 
 /*****************/
 /*********PRESENTACION***************/
+#clean {
+  color: #fff;
+}
 .header-terminal {
   display: flex;
   align-items: row;
@@ -149,5 +152,43 @@ label {
   border-color: #69f30e;
   border-width: 0.1px;
 }
-
+.disappear-my-data {
+  visibility: hidden;
+}
+.appear-my-data {
+  /* position: absolute;*/
+  visibility: visible;
+}
 /*********1PRESENTACION***************/
+
+/***scrolls arrows**/
+.arrow-down > span {
+  font-size: 1rem;
+  font-family: "Spline Sans Mono", monospace;
+
+  writing-mode: vertical-lr;
+  animation: bounce 2s infinite;
+  margin: 8px;
+}
+#scroll-down-left {
+  float: left;
+}
+#scroll-down-right {
+  float: right;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*** end scrolls arrows**/
+
+/***portfolio section**/
+
+/*** ends portfolio section**/

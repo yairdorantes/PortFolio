@@ -7,50 +7,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css.css">
+    <link rel="icon" href="/assets/programacion.png">
+
 </head>
 
 <body>
-    <div class="container-my-data">
-        <div class="header-terminal">
-            <div class="btns-window">
-                <div style="background-color:rgb(175, 21, 21);"></div>
-                <div style="background-color:rgb(206, 206, 21)"></div>
-                <div style="background-color: #69f30e;"></div>
-            </div>
-            <div>
-                <h2 class="my-name">Yair Dorantes</h2>
-            </div>
-            <div class="menu-terminal">
-                <div class="container-lines-menu">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-            </div>
-        </div>
+    <!-- loading screen -->
 
-        <div style="color:#69f30e; font-family: 'Spline Sans Mono', monospace;">
-            <span style="color:aliceblue">>_:</span><span id="be"></span> <br>
-            <span id="info-update"></span>
-            <div class="cursor"></div>
-            <div id="clear"></div>
-        </div>
-
-
-
-    </div>
-    <!-- <button onclick="appear();">clic</button> -->
-    <!-- <div class="welcome">
+    <div class="welcome">
         <label for="barras">Preparando...</label>
 
         <div id="barras" class="container-bar">
             <div class="progress"></div>
         </div>
     </div>
-    <template>
-        <h2></h2>
-    </template> -->
-    <!-- <h1>kjhkh</h1> -->
+    <!--ends loading screen -->
+    <div class="disappear-my-data">
+        <!-- Terminal -->
+        <div class="container-my-data">
+            <div class="header-terminal">
+                <div class="btns-window">
+                    <div class="btn-close" style="background-color:rgb(175, 21, 21);"></div>
+                    <div style="background-color:rgb(206, 206, 21)"></div>
+                    <div style="background-color: #69f30e;"></div>
+                </div>
+                <div>
+                    <h2 class="my-name">Yair Dorantes</h2>
+                </div>
+                <div class="menu-terminal">
+                    <div class="container-lines-menu">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div style="color:#69f30e; font-family: 'Spline Sans Mono', monospace;">
+                <span style="color:aliceblue">>_:</span><span id="be"></span> <br>
+                <span id="info-update"></span>
+                <div class="cursor"></div>
+                <span style="color:aliceblue;" id="clean">
+                </span>
+                <span style="color:#69f30e;" id="clear"></span>
+            </div>
+            <!--ends Terminal -->
+        </div>
+        <br>
+        <!-- scroll arrow -->
+        <div class="arrow-down">
+            <span id="scroll-down-left" style="color: white; position: relative;">Scroll Down ➜</span>
+            <span id="scroll-down-right" style="color: white; position: relative;">Scroll Down ➜</span>
+        </div>
+        <!-- ends scroll arrow -->
+
+        <div id="portfolio">
+            <span>jaaj</span>
+        </div>
+
+    </div>
+
+
+
+
+
+
     <script src="javascript.js"></script>
 
 </body>
