@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@700&display=swap");
 body {
+  font-family: "Spline Sans Mono", monospace;
+
   margin: 0;
   padding: 0;
   background-color: #100317;
@@ -190,5 +192,26 @@ label {
 /*** end scrolls arrows**/
 
 /***portfolio section**/
-
+#portfolio {
+  padding: 10rem 3rem;
+}
 /*** ends portfolio section**/
+body::-webkit-scrollbar {
+  width: 2px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(108, 15, 117); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #209b97; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
+/**img yo**/
+img {
+  width: 50px;
+  height: 50px;
+}
+/***en yo**/
