@@ -6,17 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
     <link rel="stylesheet" href="css.css">
     <link rel="icon" href="/assets/programacion.png">
-
+    <!-- CSS only -->
 </head>
 
 <body>
     <!-- loading screen -->
 
     <div class="welcome">
+        <img id="me-png" src="/assets/me.png" alt="">
         <label for="barras">Preparando...</label>
-
         <div id="barras" class="container-bar">
             <div class="progress"></div>
         </div>
@@ -28,7 +33,7 @@
             <div class="container-my-data">
                 <div class="header-terminal">
                     <div class="btns-window">
-                        <div class="btn-close" style="background-color:rgb(175, 21, 21);"></div>
+                        <div class="btn-closer" style="background-color:rgb(175, 21, 21);"></div>
                         <div style="background-color:rgb(206, 206, 21)"></div>
                         <div style="background-color: #69f30e;"></div>
                     </div>
@@ -63,11 +68,88 @@
         </div>
     </section>
     <!-- ends scroll arrow -->
-
+    <!-- portafolio -->
     <section id="portfolio">
-        <div style="color: white;">este es mi portfolio</div>
-    </section>
+        <h1>PortFolio</h1>
+        <div class="portfolio-container">
 
+
+            <div class="card">
+                <img style="height: 100%;" class="card-img-top" src="/assets/projects/codigo.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Weather App</h5>
+                    <p class="card-text">App que da clima</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <a href="https://weatherprojectmine.000webhostapp.com/weather/index.html">
+                            link
+                        </a></small>
+                </div>
+            </div>
+            <div class="card">
+                <video controls style="height: 100%;" class="card-img-top"
+                    src="/assets/projects/Screencast_21_06_22_17:37:24.webm" alt="Card image cap"> </video>
+                <div class="card-body">
+                    <h5 class="card-title">Trivia Preguntas</h5>
+                    <p class="card-text">juego de preguntas</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <a href="https://triviamix.000webhostapp.com/Trivia/index.html">
+                            link
+                        </a></small>
+                </div>
+            </div>
+            <div class="card">
+                <video controls style="height: 100%;" class="card-img-top" src="/assets/gato.webm"
+                    alt="Card image cap"></video>
+                <div class="card-body">
+                    <h5 class="card-title">Tic-Tac-Toe</h5>
+                    <p class="card-text">Juego del gato</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted"><a
+                            href="https://tictactoetes.000webhostapp.com/index.html">link</a></small>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <img style="height: 100%;" class="card-img-top" src="/assets/gym.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Pagina GYM</h5>
+                    <p class="card-text">Pagina para GYM</p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted">
+                        <a href="https://mi1page.herokuapp.com/home/">
+                            link
+                        </a></small>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+    <!-- end portafolio -->
+
+    <section id="knowledge">
+        <h1>My Skills</h1>
+        <div class="container-ico">
+            <img src="/assets/skills/html.svg" alt="">
+            <img src="/assets/skills/css-3.png" alt="">
+            <img src="/assets/skills/javascript_chido.svg" alt="">
+            <img src="/assets/skills/react.svg" alt="">
+            <img src="/assets/skills/gits.svg" alt="">
+            <img src="/assets/skills/github.svg" alt="">
+            <img src="/assets/skills/pythons.svg" alt="">
+            <img src="/assets/skills/django.svg" alt="">
+            <img src="/assets/skills/linux.svg" alt="">
+        </div>
+    </section>
 
 
 

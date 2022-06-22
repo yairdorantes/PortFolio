@@ -1,11 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@700&display=swap");
+
 body {
   font-family: "Spline Sans Mono", monospace;
-
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   background-color: #100317;
+}
+a {
+  text-decoration: none;
+}
+#me-png {
+  width: 280px;
+  height: 280px;
 }
 button {
   position: fixed;
@@ -34,7 +42,7 @@ label {
 
 /*********progressbar**********/
 .container-bar {
-  width: 200px;
+  width: 400px;
   height: 3px;
   border-radius: 3px;
   background-color: #2d093f;
@@ -115,8 +123,8 @@ label {
 .btns-window > div {
   cursor: pointer;
   margin: 3px;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
 }
 .menu-terminal {
@@ -139,7 +147,7 @@ label {
 .my-name {
   color: white;
   font-family: "Spline Sans Mono", monospace;
-  font-size: 3.8vw;
+  font-size: 3.9vw;
   margin-top: 0px;
 }
 
@@ -165,7 +173,7 @@ label {
 
 /***scrolls arrows**/
 .arrow-down > span {
-  font-size: 1rem;
+  font-size: 11px;
   font-family: "Spline Sans Mono", monospace;
 
   writing-mode: vertical-lr;
@@ -193,7 +201,26 @@ label {
 
 /***portfolio section**/
 #portfolio {
-  padding: 10rem 3rem;
+  padding: 8rem 3rem;
+}
+
+video {
+  width: 80%;
+  height: 30%;
+}
+#portfolio > h1 {
+  text-align: center;
+  color: #69f30e;
+}
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.portfolio-container > div {
+  width: 450px;
 }
 /*** ends portfolio section**/
 body::-webkit-scrollbar {
@@ -215,3 +242,14 @@ img {
   height: 50px;
 }
 /***en yo**/
+.card-deck > div {
+  margin: 10px;
+}
+
+#knowledge > h1 {
+  text-align: center;
+}
+#knowledge > img {
+  width: 150px;
+  height: 150px;
+}

@@ -19,7 +19,6 @@ terminal = [
   "Obj:3 http://security.ubuntu.com/ubuntu-focal-security-InRelease ",
   "Obj:4 https://packages.microsoft.com/",
 ];
-
 const d = document;
 
 const pageLoading = d.querySelector(".welcome");
@@ -40,14 +39,14 @@ let clear = "clear";
 
 const brHtml = d.createElement("br");
 
-var width = 0; //aqui 0
+var width = 401; //aqui 0
 function appear() {
   const barra = d.querySelector(".progress");
 
   pageLoading.classList.add("appear");
   const intervalo = setInterval(() => {
     width += 1;
-    if (width > 200) {
+    if (width > 400) {
       clearInterval(intervalo);
       showTerminal.classList.remove("disappear-my-data");
       showTerminal.classList.add("appear-my-data");
