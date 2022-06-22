@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans+Mono:wght@700&display=swap");
+body::-webkit-scrollbar {
+  width: 2px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(108, 15, 117); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #209b97; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
 
 body {
   font-family: "Spline Sans Mono", monospace;
@@ -223,18 +235,6 @@ video {
   width: 450px;
 }
 /*** ends portfolio section**/
-body::-webkit-scrollbar {
-  width: 2px; /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-  background: rgb(108, 15, 117); /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #209b97; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-}
 
 /**img yo**/
 img {
@@ -245,7 +245,11 @@ img {
 .card-deck > div {
   margin: 10px;
 }
-
+/******SECTION SKILLS**********/
+#knowledge {
+  color: white;
+  background-color: rgba(18, 5, 51, 0.784);
+}
 #knowledge > h1 {
   text-align: center;
 }
@@ -253,3 +257,26 @@ img {
   width: 150px;
   height: 150px;
 }
+.container-ico {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container-ico > div {
+  margin: 2px;
+  border-top: solid 1px rgb(6, 84, 71);
+  text-align: center;
+  align-items: center;
+  flex: 30.33%;
+  height: 100px;
+}
+.barra-skill {
+  margin: 8px;
+  height: 3px;
+  border-radius: 3px;
+  /* background-color: green; */
+}
+
+/****** ends SECTION SKILLS**********/
