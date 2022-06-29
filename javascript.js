@@ -29,6 +29,7 @@ const phraseDeveloper = d.getElementById("be");
 const updates = d.getElementById("info-update");
 const clearing = d.getElementById("clean");
 const clearingTxt = d.getElementById("clear");
+const allSkills = d.querySelectorAll(".skill");
 
 let str = "sudo apt-get update";
 
@@ -39,14 +40,14 @@ let clear = "clear";
 
 const brHtml = d.createElement("br");
 
-var width = 401; //aqui 0
+var width = 201; //aqui 0
 function appear() {
   const barra = d.querySelector(".progress");
 
   pageLoading.classList.add("appear");
   const intervalo = setInterval(() => {
     width += 1;
-    if (width > 400) {
+    if (width > 200) {
       clearInterval(intervalo);
       showTerminal.classList.remove("disappear-my-data");
       showTerminal.classList.add("appear-my-data");
@@ -64,10 +65,6 @@ function appear() {
     barra.style.width = `${width}px`;
   }, 10);
 }
-
-d.addEventListener("DOMContentLoaded", (e) => {
-  appear();
-});
 
 function showMyTerminal() {
   let intervalId = setInterval(function () {
@@ -104,5 +101,23 @@ function showMyTerminal() {
         }
       }, 200); //aqui era 200
     }
-  }, 200); //aqui era 200
+  }, 100); //aqui era 200
 }
+
+d.addEventListener("DOMContentLoaded", (e) => {
+  appear();
+});
+
+window.addEventListener("scroll", (e) => {
+  let scroll = window.pageYOffset || document.documentElement.scroll;
+  console.log(scroll);
+  if (scroll > 1400) {
+    var contColored = 0;
+    let intervalSkills = setInterval(() => {
+      allSkills[contColored].classList.remove("skill");
+      allSkills[contColored].classList.add("skillColored");
+      contColored++;
+      if (contColored === allSkills.length) clearInterval(intervalSkills);
+    }, 400);
+  }
+});
