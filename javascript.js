@@ -106,11 +106,12 @@ function showMyTerminal() {
 
 d.addEventListener("DOMContentLoaded", (e) => {
   appear();
+  smartVideo();
 });
 
 window.addEventListener("scroll", (e) => {
   let scroll = window.pageYOffset || document.documentElement.scroll;
-  console.log(scroll);
+  //console.log(scroll);
   if (scroll > 1400) {
     var contColored = 0;
     let intervalSkills = setInterval(() => {
@@ -121,3 +122,22 @@ window.addEventListener("scroll", (e) => {
     }, 400);
   }
 });
+
+function smartVideo() {
+  const $videos = d.querySelectorAll("video[data-smart-video]");
+  const cb = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.play();
+      } else {
+        entry.target.pause();
+      }
+      window.addEventListener("visibilitychange", (e) => {
+        d.visibilityState === "visible" ? entry.play() : entry.pause();
+      });
+    });
+  };
+  const observer = new IntersectionObserver(cb, { threshold: 0.5 });
+
+  $videos.forEach((el) => observer.observe(el));
+}

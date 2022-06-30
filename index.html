@@ -42,16 +42,16 @@
                     </div>
                     <div class="menu-terminal">
                         <div class="container-lines-menu">
-                            <div></div>
-                            <div></div>
-                            <div></div>
+                            <img src="./assets/terminal3.png" alt="">
                         </div>
                     </div>
                 </div>
-                <div style="color:#69f30e; font-family: 'Spline Sans Mono', monospace;">
+                <div class="container-data-terminal" style="color:#69f30e; font-family: 'Spline Sans Mono', monospace;">
                     <span style="color:aliceblue">>_:</span><span id="be"></span> <br>
                     <span id="info-update"></span>
+
                     <div class="cursor"></div>
+                    <br>
                     <span style="color:aliceblue;" id="clean">
                     </span>
                     <span style="color:#69f30e;" id="clear"></span>
@@ -88,8 +88,9 @@
                 </div>
             </div>
             <div class="card">
-                <video controls style="height: 100%;" class="card-img-top"
-                    src="/assets/projects/Screencast_21_06_22_17:37:24.webm" alt="Card image cap"> </video>
+                <video muted loop controls style="height: 100%;" class="card-img-top"
+                    src="/assets/projects/Screencast_21_06_22_17:37:24.webm" alt="Card image cap" data-smart-video>
+                </video>
                 <div class="card-body">
                     <h5 class="card-title">Trivia Preguntas</h5>
                     <p class="card-text">juego de preguntas</p>
@@ -132,7 +133,6 @@
 
 
         </div>
-
     </section>
     <!-- end portafolio -->
 
@@ -185,27 +185,20 @@
 
     <section id="contact">
         <h1>Contact me</h1>
-        <form autocomplete="off" method="POST" action="https://formsubmit.co/yairmasterlol@gmail.com">
-            <div>
-                <div class="input-container">
-                    <input class="effect-1" name='name' type="text" required placeholder="Nombre">
-                    <span class="focus-border"></span>
-                </div>
-            </div>
+        <div class="container-form">
 
-            <div>
-                <div class="input-container">
-                    <input class="effect-1" name="email" type="email" required placeholder="email">
-                    <span class="focus-border"></span>
-                </div>
-            </div>
-            <div>
-                <textarea rows="5" name="text" cols="30" class="effect-1" required placeholder="Anotaciones"></textarea>
-            </div>
 
-            <!-- <input class="Send" type="submit"> -->
-            <button id="send" type="submit">Send</button>
-        </form>
+            <form action="https://formsubmit.co/yairmasterlol@gmail.com" method="POST" class="form">
+                <h2 class="form-h2">CONTACT ME</h2>
+                <p class="parrafo" type="Name:"><input name="name" placeholder="Write your name here.."></input></p>
+                <p class="parrafo" type="Email:"><input name="email"
+                        placeholder="Let us know how to contact you back.."></input></p>
+                <p class="parrafo" type="Message:"><input name="text"
+                        placeholder="What would you like to tell us.."></input></p>
+                <button type="submit" class="btn-form">Send Message</button>
+
+            </form>
+        </div>
     </section>
 
     <br>
