@@ -18,7 +18,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #100317;
+
+  background-color: #1a1165;
 }
 a {
   text-decoration: none;
@@ -127,6 +128,7 @@ label {
   height: 17px;
   animation: parpadeo 1.8s infinite;
 }
+
 @keyframes parpadeo {
   0%,
   50%,
@@ -138,6 +140,7 @@ label {
     opacity: 0;
   }
 }
+
 .btns-window {
   display: flex;
   flex-direction: row;
@@ -178,7 +181,7 @@ label {
 }
 @media only screen and (max-width: 480px) {
   .container-my-data {
-    width: 95vw;
+    width: 98vw;
   }
 }
 .disappear-my-data {
@@ -187,6 +190,26 @@ label {
 .appear-my-data {
   /* position: absolute;*/
   visibility: visible;
+}
+
+.hide-data-terminal {
+  display: none;
+}
+
+.container-icon-data {
+  width: 200px;
+}
+
+.my-class {
+  display: flex;
+  flex-direction: column;
+}
+.my-class > div {
+  margin: 20px;
+}
+.img-terminal {
+  width: 20px;
+  height: 20px;
 }
 /*********1PRESENTACION***************/
 
@@ -221,6 +244,10 @@ label {
 /***portfolio section**/
 #portfolio {
   padding: 8rem 3rem;
+
+  background-image: url("/assets/fondoxd.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 video {
@@ -244,6 +271,10 @@ video {
 /*** ends portfolio section**/
 
 /**img yo**/
+small > span > img {
+  width: 20px;
+  height: 20px;
+}
 img {
   width: 50px;
   height: 50px;
@@ -255,7 +286,7 @@ img {
 /******SECTION SKILLS**********/
 #knowledge {
   color: white;
-  background-color: rgba(16, 77, 131, 0.784);
+  background-color: #2d3054;
 }
 #knowledge > h1 {
   text-align: center;
@@ -366,5 +397,8 @@ button:hover {
 #contact > h1 {
   text-align: center;
   color: #69f30e;
+}
+#contact {
+  background-color: #de325a;
 }
 /*****end contact **********/

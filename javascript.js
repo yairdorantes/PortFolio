@@ -90,10 +90,11 @@ function showMyTerminal() {
               clearInterval(intervalClear);
 
               setTimeout(() => {
-                phraseDeveloper.textContent = "";
-                phraseDeveloper.textContent += "Yair Dorantes";
-                updates.textContent = " >_: web developer";
-                clearingTxt.textContent = `${traslate.es.phrase}`;
+                const $beforeText = d.querySelector(".show-comands-terminal");
+                $beforeText.style.display = "none";
+                const $changeDiv = d.querySelector(".hide-data-terminal");
+                $changeDiv.classList.remove("hide-data-terminal");
+                $changeDiv.classList.add("my-class");
               }, 1000);
             }
           }, 300); //aqui era 300
@@ -107,6 +108,7 @@ function showMyTerminal() {
 d.addEventListener("DOMContentLoaded", (e) => {
   appear();
   smartVideo();
+  userAgent();
 });
 
 window.addEventListener("scroll", (e) => {
@@ -140,4 +142,37 @@ function smartVideo() {
   const observer = new IntersectionObserver(cb, { threshold: 0.5 });
 
   $videos.forEach((el) => observer.observe(el));
+}
+
+function userAgent() {
+  const $insertInfo = d.querySelector(".hide-data-terminal");
+
+  const parser = new UAParser();
+  const get = parser.getResult();
+  console.log(parser.getResult());
+
+  const browser = get.browser.name,
+    OS = get.os.name,
+    deviceModel = get.device.model,
+    deviceType = get.device.type,
+    deviceVendor = get.device.vendor;
+  if (deviceVendor) {
+    console.log(deviceVendor);
+  } else {
+    console.log(":(");
+  }
+  console.log(browser);
+  $insertInfo.innerHTML = `
+   <div> <img class="img-terminal" src="/assets/infor_terminal/name.png" alt=""> Yair Dorantes
+                        </div>
+                        <div> <img class="img-terminal" src="/assets/infor_terminal/puesto.png" alt=""> web developers
+                        </div>
+                        <div> <img class="img-terminal" src="/assets/infor_terminal/text.png" alt=""> i like</div>
+
+                        <span>Estas viendo desde</span>
+
+                        <div> <img class="img-terminal" src="/assets/infor_terminal/browser.png" alt=""> Navegador: ${browser}</div>
+                        <div> <img class="img-terminal" src="/assets/infor_terminal/os.png" alt=""> OS:${OS}</div>
+
+  `;
 }
