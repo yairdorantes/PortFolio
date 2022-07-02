@@ -1,12 +1,10 @@
 traslate = {
   es: {
-    introduce: "Yair Dorantes",
     puesto: "Desarrollador web",
     phrase:
       "Soy ingeniero en sistemas, me gusta hacer la vida de las personas más facil y segura mediante la implementacion del desarrollo web",
   },
   en: {
-    introduce: "Yair Dorantes",
     puesto: "web developer",
     phrase:
       "I am a systems engineer, I like to make people's lives easier and safer through the implementation of web development",
@@ -14,12 +12,14 @@ traslate = {
 };
 
 terminal = [
-  "Obj:1 http://update.send-anywhere.com/linux/debian stable InRelease",
-  "Obj:2 http://packages.microsoft.com/code stable InRelease",
-  "Obj:3 http://security.ubuntu.com/ubuntu-focal-security-InRelease ",
+  "Obj:1 http://update.send-anywhere.com/linux/debiane",
+  "Obj:2 http://packages.microsoft.com/code ",
+  "Obj:3 http://security.ubuntu.com/ubuntu",
   "Obj:4 https://packages.microsoft.com/",
 ];
+
 const d = document;
+const $body = d.querySelector("body");
 
 const pageLoading = d.querySelector(".welcome");
 
@@ -31,16 +31,14 @@ const clearing = d.getElementById("clean");
 const clearingTxt = d.getElementById("clear");
 const allSkills = d.querySelectorAll(".skill");
 
-let str = "sudo apt-get update";
+let str = "sudo apt-get update Yair Dorantes perfil";
 
 let index = 0;
 let indexUpdate = 0;
 let indexClear = 0;
 let clear = "clear";
 
-const brHtml = d.createElement("br");
-
-var width = 201; //aqui 0
+var width = 200; //aqui 0
 function appear() {
   const barra = d.querySelector(".progress");
 
@@ -54,12 +52,13 @@ function appear() {
       pageLoading.classList.add("disappear");
       setTimeout(() => {
         width = 0;
-        pageLoading.classList.remove("disappear");
         pageLoading.classList.remove("appear");
-      }, 800); //aqui era 800
+        pageLoading.classList.add("disappear");
+      }, 1000); //aqui era 800
 
       setTimeout(() => {
         showMyTerminal();
+        $body.style.overflowY = "auto";
       }, 700); //aqui era 700
     }
     barra.style.width = `${width}px`;
@@ -75,7 +74,7 @@ function showMyTerminal() {
       clearInterval(intervalId);
       /***aparecen actualizaciones */
       let intervalUpdate = setInterval(function () {
-        updates.textContent += terminal[indexUpdate] + brHtml;
+        updates.innerHTML += terminal[indexUpdate] + "<br>";
         indexUpdate++;
         if (indexUpdate === terminal.length) {
           clearInterval(intervalUpdate);
@@ -109,6 +108,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   appear();
   smartVideo();
   userAgent();
+  $body.style.overflowY = "hidden";
 });
 
 window.addEventListener("scroll", (e) => {
@@ -149,19 +149,13 @@ function userAgent() {
 
   const parser = new UAParser();
   const get = parser.getResult();
-  console.log(parser.getResult());
 
   const browser = get.browser.name,
     OS = get.os.name,
     deviceModel = get.device.model,
     deviceType = get.device.type,
     deviceVendor = get.device.vendor;
-  if (deviceVendor) {
-    console.log(deviceVendor);
-  } else {
-    console.log(":(");
-  }
-  console.log(browser);
+
   $insertInfo.innerHTML = `
    <div> <img class="img-terminal" src="/assets/infor_terminal/name.png" alt=""> Yair Dorantes
                         </div>

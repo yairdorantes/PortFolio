@@ -19,7 +19,9 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: #1a1165;
+  background-image: url("/assets/bey2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
 }
 a {
   text-decoration: none;
@@ -32,8 +34,11 @@ button {
   position: fixed;
 }*/
 .welcome {
+  background-image: url("/assets/mountains.jpg");
+  background-size: cover;
   z-index: 1000;
   position: fixed;
+  top: 0;
   background-color: #1b0527;
   width: 100vw;
   height: 100vh;
@@ -56,13 +61,14 @@ label {
 /*********progressbar**********/
 .container-bar {
   width: 200px;
-  height: 3px;
+  height: 5px;
   border-radius: 3px;
   background-color: #2d093f;
 }
 .progress {
+  filter: brightness(1.5);
   width: 0px;
-  height: 3px;
+  height: 5px;
   border-radius: 3px;
 
   background: linear-gradient(
@@ -78,6 +84,38 @@ label {
   visibility: visible;
   animation: aparecer 0.8s ease-in-out;
 }
+
+.disappear {
+  animation: aparecer2 1s ease-in-out;
+}
+
+@keyframes aparecer2 {
+  0% {
+    opacity: 0.9;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  95% {
+    opacity: 0.09;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*
 @keyframes aparecer {
   0% {
     opacity: 0.1;
@@ -85,12 +123,9 @@ label {
   100% {
     opacity: 1;
   }
-}
+}*/
 /*****************/
 /*******DESAPARECER CARGA********/
-.disappear {
-  animation: bye 2s;
-}
 
 @keyframes bye {
   0% {
@@ -107,6 +142,8 @@ label {
   color: #fff;
 }
 .header-terminal {
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
   display: flex;
   align-items: row;
   justify-content: space-between;
@@ -115,10 +152,12 @@ label {
   background-color: rgb(36, 36, 36);
 }
 .container-data-terminal {
-  height: 97%;
+  height: 575px;
   border-style: solid;
   border-color: rgb(36, 36, 36);
   border-width: 4.5px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 .cursor {
   position: absolute;
@@ -147,7 +186,7 @@ label {
 }
 .btns-window > div {
   cursor: pointer;
-  margin: 3px;
+  margin: 5px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
@@ -161,7 +200,7 @@ label {
 .container-lines-menu > img {
   height: 20px;
   width: 20px;
-  margin: 3px;
+  margin: 5px;
 }
 .my-name {
   color: white;
@@ -169,15 +208,15 @@ label {
   font-size: 20px;
   margin-top: 0px;
 }
-
+/***************AQUIIIAQUIIII**********/
 .container-my-data {
   margin: auto;
   margin-top: 10px;
   opacity: 0.9;
   width: 70vw;
-  height: 80vh;
-  border-radius: 2px;
-  background-color: rgba(36, 15, 46, 0.963);
+  height: 600px;
+  border-radius: 12px;
+  background-color: #282a36;
 }
 @media only screen and (max-width: 480px) {
   .container-my-data {
@@ -188,6 +227,7 @@ label {
   visibility: hidden;
 }
 .appear-my-data {
+  margin-bottom: 150px;
   /* position: absolute;*/
   visibility: visible;
 }
@@ -195,10 +235,10 @@ label {
 .hide-data-terminal {
   display: none;
 }
-
+/*
 .container-icon-data {
   width: 200px;
-}
+}*/
 
 .my-class {
   display: flex;
@@ -215,6 +255,7 @@ label {
 
 /***scrolls arrows**/
 .arrow-down > span {
+  z-index: 1000;
   font-size: 11px;
   font-family: "Spline Sans Mono", monospace;
 
@@ -242,12 +283,18 @@ label {
 /*** end scrolls arrows**/
 
 /***portfolio section**/
+.card {
+  background-color: rgb(19, 23, 44);
+  color: white;
+}
+.card > video {
+  padding: 2px;
+}
+.card > img {
+  padding: 2px;
+}
 #portfolio {
   padding: 8rem 3rem;
-
-  background-image: url("/assets/fondoxd.jpg");
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 video {
@@ -284,12 +331,10 @@ img {
   margin: 10px;
 }
 /******SECTION SKILLS**********/
-#knowledge {
-  color: white;
-  background-color: #2d3054;
-}
+
 #knowledge > h1 {
   text-align: center;
+  color: white;
 } /*
 #knowledge > img {
   width: 380px;
@@ -309,6 +354,9 @@ img {
   align-items: center;
   flex: 30.33%;
   height: 100px;
+}
+.container-ico > div > img {
+  filter: brightness(1.2);
 }
 .barra-skill {
   margin: 8px;
@@ -343,21 +391,25 @@ img {
   background: #e6e6e6;
   border-radius: 8px;
   box-shadow: 0 0 40px -10px #000;
-  margin: calc(50vh - 220px) auto;
+  margin: auto;
+  margin-bottom: 20px;
   padding: 20px 30px;
   max-width: calc(100vw - 40px);
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   position: relative;
+  background-color: rgb(19, 23, 44);
 }
+
 .form-h2 {
   margin: 10px 0;
   padding-bottom: 10px;
   width: 180px;
-  color: #78788c;
+  color: #3399ff;
   border-bottom: 3px solid #78788c;
 }
 input {
+  color: white;
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
@@ -367,17 +419,17 @@ input {
   border: 0;
   font-family: "Montserrat", sans-serif;
   transition: all 0.3s;
-  border-bottom: 2px solid #bebed2;
+  border-bottom: 2px solid #78788c;
 }
 input:focus {
-  border-bottom: 2px solid #78788c;
+  border-bottom: 2px solid #bebed2;
 }
 .parrafo:before {
   content: attr(type);
   display: block;
   margin: 15px 0 0;
   font-size: 14px;
-  color: #5a5a5a;
+  color: #3399ff;
 }
 .btn-form {
   float: right;
@@ -386,19 +438,26 @@ input:focus {
   font-family: "Montserrat", sans-serif;
   border: 2px solid #78788c;
   background: 0;
-  color: #5a5a6e;
+  color: #3399ff;
   cursor: pointer;
   transition: all 0.3s;
+  border-radius: 5px;
 }
 button:hover {
-  background: #78788c;
-  color: #fff;
+  background: #3399ff;
+  color: rgb(255, 255, 255);
 }
 #contact > h1 {
-  text-align: center;
   color: #69f30e;
 }
-#contact {
-  background-color: #de325a;
-}
+
 /*****end contact **********/
+
+.fondo-todos {
+  background-image: url("/assets/coding2.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
+.fondo-todos > h1 {
+  color: white;
+}
