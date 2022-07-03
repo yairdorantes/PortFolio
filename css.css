@@ -39,16 +39,20 @@ button {
   z-index: 1000;
   position: fixed;
   top: 0;
-  background-color: #1b0527;
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   align-items: center;
   visibility: hidden;
 }
-
+.welcome > img {
+  margin-top: 20vh;
+}
+.welcome > * {
+  margin: 10px;
+}
 /***label cargando****/
 label {
   font-size: 15px;
@@ -56,8 +60,8 @@ label {
   color: #69f30e;
   font-family: "Spline Sans Mono", monospace;
 }
-/************/
 
+/************/
 /*********progressbar**********/
 .container-bar {
   width: 200px;
@@ -208,6 +212,11 @@ label {
   font-size: 20px;
   margin-top: 0px;
 }
+.my-name > img {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
+}
 /***************AQUIIIAQUIIII**********/
 .container-my-data {
   margin: auto;
@@ -216,7 +225,7 @@ label {
   width: 70vw;
   height: 600px;
   border-radius: 12px;
-  background-color: #282a36;
+  background-color: #282a36b1;
 }
 @media only screen and (max-width: 480px) {
   .container-my-data {
@@ -355,9 +364,9 @@ img {
   flex: 30.33%;
   height: 100px;
 }
-.container-ico > div > img {
+/* .container-ico > div > img {
   filter: brightness(1.2);
-}
+} */
 .barra-skill {
   margin: 8px;
   height: 3px;
@@ -369,6 +378,9 @@ img {
 }
 .skillColored {
   animation: pulso 1s ease-in-out;
+}
+.skillColored {
+  filter: grayscale(0%);
 }
 
 @keyframes pulso {
@@ -392,7 +404,7 @@ img {
   border-radius: 8px;
   box-shadow: 0 0 40px -10px #000;
   margin: auto;
-  margin-bottom: 20px;
+  margin-bottom: 2px;
   padding: 20px 30px;
   max-width: calc(100vw - 40px);
   box-sizing: border-box;
@@ -454,10 +466,12 @@ button:hover {
 /*****end contact **********/
 
 .fondo-todos {
+  bottom: 1px;
   background-image: url("/assets/coding2.jpg");
   background-attachment: fixed;
   background-size: cover;
 }
 .fondo-todos > h1 {
   color: white;
+  text-align: center;
 }

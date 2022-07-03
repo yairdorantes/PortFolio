@@ -31,20 +31,20 @@ const clearing = d.getElementById("clean");
 const clearingTxt = d.getElementById("clear");
 const allSkills = d.querySelectorAll(".skill");
 
-let str = "sudo apt-get update Yair Dorantes perfil";
+let str = "obteniendo datos actualizados - usuario: Yair";
 
 let index = 0;
 let indexUpdate = 0;
 let indexClear = 0;
 let clear = "clear";
 
-var width = 200; //aqui 0
+var width = 0; //aqui 0
 function appear() {
   const barra = d.querySelector(".progress");
 
   pageLoading.classList.add("appear");
   const intervalo = setInterval(() => {
-    width += 1;
+    width += 1.3;
     if (width > 200) {
       clearInterval(intervalo);
       showTerminal.classList.remove("disappear-my-data");
@@ -54,7 +54,7 @@ function appear() {
         width = 0;
         pageLoading.classList.remove("appear");
         pageLoading.classList.add("disappear");
-      }, 1000); //aqui era 800
+      }, 800); //aqui era 800
 
       setTimeout(() => {
         showMyTerminal();
@@ -113,8 +113,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
 window.addEventListener("scroll", (e) => {
   let scroll = window.pageYOffset || document.documentElement.scroll;
+  console.log(scroll);
   //console.log(scroll);
-  if (scroll > 1400) {
+  if (scroll > 2027) {
     var contColored = 0;
     let intervalSkills = setInterval(() => {
       allSkills[contColored].classList.remove("skill");
