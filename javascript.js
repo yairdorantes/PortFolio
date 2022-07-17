@@ -160,9 +160,8 @@ function userAgent() {
   $insertInfo.innerHTML = `
    <div> <img class="img-terminal" src="/assets/infor_terminal/name.png" alt=""> Yair Dorantes
                         </div>
-                        <div> <img class="img-terminal" src="/assets/infor_terminal/puesto.png" alt=""> web developers
+                        <div> <img class="img-terminal" src="/assets/infor_terminal/puesto.png" alt=""> Desarrollador web
                         </div>
-                        <div> <img class="img-terminal" src="/assets/infor_terminal/text.png" alt=""> i like</div>
 
                         <span>Estas viendo desde</span>
 
